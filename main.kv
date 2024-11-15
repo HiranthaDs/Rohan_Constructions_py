@@ -1,0 +1,104 @@
+<MainScreen>:
+        GridLayout:
+                rows: 5
+                cols: 1
+                padding: 20
+                spacing: 10
+                GridLayout:
+                        size_hint: 1, 0.2
+                        padding: 30
+                        rows: 1
+                        cols: 3
+                        RButton4:
+                                id: archiveBtn
+                                size_hint: 0.1, 1
+                                text: 'Archive'
+                                on_release: root.btn_click(self)
+                        CLabel:
+                                text: 'Project Management System'
+                                size_hint: 0.7, 1
+                                font_size: '40sp'
+                                bold: True
+
+                        GridLayout:
+                                rows: 2
+                                size_hint: 0.2, 1
+                                RButton4:
+                                        id: logBtn
+                                        size_hint: 0.1, 0.5
+                                        text: 'LogIn'
+                                        on_release: root.btn_click(self)
+                                CLabel:
+                                        id: logStatus
+                                        size_hint: 0.1, 0.5
+
+                GridLayout:
+                        rows: 2
+                        cols: 3
+                        spacing: 40
+                        padding: 30
+                        size_hint: 1, 0.7
+
+                        MenuButton:
+                                id: projectsBtn
+                                main_font_size: '38sp'
+                                sub_font_size: '22sp'
+                                main_text: 'Projects'
+                                sub_text: 'View and Manage your \n Projects details here'
+                                on_release:
+                                        root.parent.current = 'projects'
+                                        root.manager.transition.direction = 'left'
+
+                        MenuButton:
+                                id: clientsBtn
+                                main_font_size: '38sp'
+                                sub_font_size: '22sp'
+                                main_text: 'Clients'
+                                sub_text: 'View and Manage your \n Clients details here'
+                                on_release:
+                                        root.parent.current = 'clients'
+                                        root.manager.transition.direction = 'left'
+
+                        MenuButton:
+                                id: suppliersBtn
+                                main_font_size: '38sp'
+                                sub_font_size: '22sp'
+                                main_text: 'Suppliers'
+                                sub_text: 'View and Manage your \n Suppliers details here'
+                                on_release:
+                                        root.parent.current = 'suppliers'
+                                        root.manager.transition.direction = 'left'
+
+                        MenuButton:
+                                id: resourcesBtn
+                                main_font_size: '38sp'
+                                sub_font_size: '22sp'
+                                main_text: 'Resources'
+                                sub_text: 'View and Manage your \n Resources details here'
+                                on_release:
+                                        root.parent.current = 'resources'
+                                        root.manager.transition.direction = 'left'
+
+                        MenuButton:
+                                id: personnelBtn
+                                main_font_size: '38sp'
+                                sub_font_size: '22sp'
+                                main_text: 'Personnel'
+                                sub_text: 'View and Manage your \n Personnel details here'
+                                on_release:
+                                        root.parent.current = 'manpower'
+                                        root.manager.transition.direction = 'left'
+
+                        MenuButton:
+                                id: financesBtn
+                                main_font_size: '38sp'
+                                sub_font_size: '22sp'
+                                main_text: 'Finances'
+                                sub_text: 'View and Manage your \n Finances details here'
+                                on_release:
+                                        root.parent.current = 'finances'
+                                        root.manager.transition.direction = 'left'
+
+
+
+
